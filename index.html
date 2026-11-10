@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>왕의 남자 캐릭터 티어리스트</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Malgun Gothic", Arial, sans-serif;
+      background: #f4f6f9;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #1f2937, #4b5563);
+      color: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      margin-bottom: 25px;
+    }
+
+    .header h1 {
+      margin: 0 0 10px;
+      font-size: 2.2rem;
+    }
+
+    .header p {
+      margin: 0;
+      font-size: 1.05rem;
+      opacity: 0.95;
+    }
+
+    .section {
+      background: white;
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    }
+
+    .section h2 {
+      margin-top: 0;
+      color: #111827;
+      border-left: 6px solid #2563eb;
+      padding-left: 10px;
+      font-size: 1.35rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 15px;
+    }
+
+    .card {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      color: #1f2937;
+    }
+
+    .highlight {
+      background: #fff7ed;
+      border: 1px solid #fdba74;
+      color: #9a3412;
+      padding: 14px 16px;
+      border-radius: 12px;
+      font-weight: bold;
+    }
+
+    .tier {
+      margin-top: 16px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+    }
+
+    .tier-row {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      min-height: 110px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .tier-row:last-child {
+      border-bottom: none;
+    }
+
+    .tier-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: white;
+    }
+
+    .tier-content {
+      padding: 14px;
+      background: #fff;
+    }
+
+    .character {
+      display: inline-block;
+      background: #eef2ff;
+      border: 1px solid #c7d2fe;
+      color: #3730a3;
+      padding: 10px 12px;
+      border-radius: 10px;
+      margin: 6px 8px 6px 0;
+      font-size: 0.95rem;
+    }
+
+    .note {
+      margin-top: 8px;
+      color: #4b5563;
+      font-size: 0.95rem;
+    }
+
+    .s { background: #dc2626; }
+    .a { background: #f59e0b; }
+    .b { background: #3b82f6; }
+    .c { background: #6b7280; }
+
+    ul {
+      margin: 8px 0 0 20px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      color: #6b7280;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>영화 〈왕의 남자〉 캐릭터 티어리스트</h1>
+      <p>친구들에게 재미있게 추천하기 위한, 인물과 장면 중심의 평가 페이지</p>
+    </div>
+
+    <div class="section">
+      <h2>1. 누구에게</h2>
+      <p>영화 〈왕의 남자〉를 친구들에게 추천하고 싶은 사람을 위한 티어리스트입니다.</p>
+    </div>
+
+    <div class="section">
+      <h2>2. 목적</h2>
+      <p>영화의 재미와 완성도를 함께 보여주고, 등장인물의 매력을 티어로 정리하기 위해 만들었습니다.</p>
+      <div class="highlight">
+        나는 이 작품을 전체적으로 S등급으로 평가한다.
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>3. 화면 및 동작</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>화면</h3>
+          <p>S, A, B 등급으로 나눈 티어 표를 보여준다.</p>
+        </div>
+        <div class="card">
+          <h3>동작</h3>
+          <p>주요 인물들을 각 등급에 배치하고, 풍자극과 외줄타기 장면을 근거로 평가한다.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>4. 필요한 자료</h2>
+      <ul>
+        <li>등장인물 정보</li>
+        <li>각 인물에 대한 평가</li>
+        <li>대표 장면: 풍자극, 외줄타기 장면</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>5. 완성 기준</h2>
+      <p>캐릭터의 티어와 평가가 명확하게 정리되어 있어야 하며, 전체적으로 영화의 완성도가 높다는 점이 드러나야 합니다.</p>
+    </div>
+
+    <div class="section">
+      <h2>캐릭터 티어리스트</h2>
+      <div class="tier">
+        <div class="tier-row">
+          <div class="tier-label s">S</div>
+          <div class="tier-content">
+            <span class="character">장생</span>
+            <span class="character">공길</span>
+            <p class="note">
+              장생은 마지막 외줄타기 장면으로 영화의 상징이 되었고, 공길은 풍자극과 섬세한 연기로 작품의 중심을 잡는다.
+            </p>
+          </div>
+        </div>
+
+        <div class="tier-row">
+          <div class="tier-label a">A</div>
+          <div class="tier-content">
+            <span class="character">연산군</span>
+            <span class="character">장녹수</span>
+            <p class="note">
+              연산군은 광기와 슬픔이 함께 보이는 인물이고, 장녹수는 긴장감을 높이는 중요한 캐릭터다.
+            </p>
+          </div>
+        </div>
+
+        <div class="tier-row">
+          <div class="tier-label b">B</div>
+          <div class="tier-content">
+            <span class="character">처선</span>
+            <span class="character">육갑</span>
+            <span class="character">칠득</span>
+            <span class="character">팔복</span>
+            <p class="note">
+              이야기의 흐름을 이어 주는 인물들로, 작품의 분위기를 더해 준다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      〈왕의 남자〉 티어리스트 완성
+    </div>
+  </div>
+</body>
+</html><!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>왕의 남자 캐릭터 티어리스트</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Malgun Gothic", Arial, sans-serif;
+      background: #f4f6f9;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #1f2937, #4b5563);
+      color: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      margin-bottom: 25px;
+    }
+
+    .header h1 {
+      margin: 0 0 10px;
+      font-size: 2.2rem;
+    }
+
+    .header p {
+      margin: 0;
+      font-size: 1.05rem;
+      opacity: 0.95;
+    }
+
+    .section {
+      background: white;
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    }
+
+    .section h2 {
+      margin-top: 0;
+      color: #111827;
+      border-left: 6px solid #2563eb;
+      padding-left: 10px;
+      font-size: 1.35rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 15px;
+    }
+
+    .card {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      color: #1f2937;
+    }
+
+    .highlight {
+      background: #fff7ed;
+      border: 1px solid #fdba74;
+      color: #9a3412;
+      padding: 14px 16px;
+      border-radius: 12px;
+      font-weight: bold;
+    }
+
+    .tier {
+      margin-top: 16px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+    }
+
+    .tier-row {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      min-height: 110px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .tier-row:last-child {
+      border-bottom: none;
+    }
+
+    .tier-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: white;
+    }
+
+    .tier-content {
+      padding: 14px;
+      background: #fff;
+    }
+
+    .character {
+      display: inline-block;
+      background: #eef2ff;
+      border: 1px solid #c7d2fe;
+      color: #3730a3;
+      padding: 10px 12px;
+      border-radius: 10px;
+      margin: 6px 8px 6px 0;
+      font-size: 0.95rem;
+    }
+
+    .note {
+      margin-top: 8px;
+      color: #4b5563;
+      font-size: 0.95rem;
+    }
+
+    .s { background: #dc2626; }
+    .a { background: #f59e0b; }
+    .b { background: #3b82f6; }
+    .c { background: #6b7280; }
+
+    ul {
+      margin: 8px 0 0 20px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      color: #6b7280;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>영화 〈왕의 남자〉 캐릭터 티어리스트</h1>
+      <p>친구들에게 재미있게 추천하기 위한, 인물과 장면 중심의 평가 페이지</p>
+    </div>
+
+    <div class="section">
+      <h2>1. 누구에게</h2>
+      <p>영화 〈왕의 남자〉를 친구들에게 추천하고 싶은 사람을 위한 티어리스트입니다.</p>
+    </div>
+
+    <div class="section">
+      <h2>2. 목적</h2>
+      <p>영화의 재미와 완성도를 함께 보여주고, 등장인물의 매력을 티어로 정리하기 위해 만들었습니다.</p>
+      <div class="highlight">
+        나는 이 작품을 전체적으로 S등급으로 평가한다.
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>3. 화면 및 동작</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>화면</h3>
+          <p>S, A, B 등급으로 나눈 티어 표를 보여준다.</p>
+        </div>
+        <div class="card">
+          <h3>동작</h3>
+          <p>주요 인물들을 각 등급에 배치하고, 풍자극과 외줄타기 장면을 근거로 평가한다.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>4. 필요한 자료</h2>
+      <ul>
+        <li>등장인물 정보</li>
+        <li>각 인물에 대한 평가</li>
+        <li>대표 장면: 풍자극, 외줄타기 장면</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>5. 완성 기준</h2>
+      <p>캐릭터의 티어와 평가가 명확하게 정리되어 있어야 하며, 전체적으로 영화의 완성도가 높다는 점이 드러나야 합니다.</p>
+    </div>
+
+    <div class="section">
+      <h2>캐릭터 티어리스트</h2>
+      <div class="tier">
+        <div class="tier-row">
+          <div class="tier-label s">S</div>
+          <div class="tier-content">
+            <span class="character">장생</span>
+            <span class="character">공길</span>
+            <p class="note">
+              장생은 마지막 외줄타기 장면으로 영화의 상징이 되었고, 공길은 풍자극과 섬세한 연기로 작품의 중심을 잡는다.
+            </p>
+          </div>
+        </div>
+
+        <div class="tier-row">
+          <div class="tier-label a">A</div>
+          <div class="tier-content">
+            <span class="character">연산군</span>
+            <span class="character">장녹수</span>
+            <p class="note">
+              연산군은 광기와 슬픔이 함께 보이는 인물이고, 장녹수는 긴장감을 높이는 중요한 캐릭터다.
+            </p>
+          </div>
+        </div>
+
+        <div class="tier-row">
+          <div class="tier-label b">B</div>
+          <div class="tier-content">
+            <span class="character">처선</span>
+            <span class="character">육갑</span>
+            <span class="character">칠득</span>
+            <span class="character">팔복</span>
+            <p class="note">
+              이야기의 흐름을 이어 주는 인물들로, 작품의 분위기를 더해 준다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      〈왕의 남자〉 티어리스트 완성
+    </div>
+  </div>
+</body>
+</html>
